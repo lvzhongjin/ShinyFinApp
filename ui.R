@@ -10,16 +10,21 @@ fluidPage(
       selectizeInput(
         inputId = "old", 
         label = "Benchmark Portfolio", 
-        choices =  colnames(portfolios)[-1]
+        choices =  colnames(ps)[-1]
         ),
       selectizeInput(
         inputId = "new", 
         label = "Smart Beta Strategies", 
-        choices = colnames(portfolios[-1]) 
+        choices = colnames(ps[-1]) 
+        ),
+      dateRangeInput(
+        "dates", 
+        label = ("Date range")
         )
     ),
     mainPanel(
-      plotOutput("count")
+      plotOutput("count"),
+      tableOutput("view")
     )
   )
 )
