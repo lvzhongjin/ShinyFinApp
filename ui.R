@@ -30,8 +30,10 @@ fluidPage(
   
     ),
     mainPanel(
-      plotOutput("count"),
-      tableOutput("view")
+      tabsetPanel(type = "tabs",
+                  tabPanel("Plot", plotOutput("count")),
+                  tabPanel("Table", tableOutput("view"))
+      )
     )
   )
 )

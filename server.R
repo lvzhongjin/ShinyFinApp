@@ -24,7 +24,9 @@ function(input, output) {
   })
   
   output$view <- renderTable({
-    head(datasetInput())
+    datasetInput()
+    
+    #head(datasetInput())
   })
 }
 
