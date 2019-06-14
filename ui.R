@@ -32,7 +32,8 @@ fluidPage(
     mainPanel(
       tabsetPanel(type = "tabs",
                   tabPanel("Plot", plotOutput("count")),
-                  tabPanel("Table", tableOutput("view"))
+                  tabPanel("GvisPlot", plotOutput("gvis")),
+                  tabPanel("Portfolio Performance", tableOutput("view"))
       )
     )
   )
